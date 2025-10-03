@@ -1,0 +1,119 @@
+
+ :root { --card-bg: #fff; --accent: #e07a5f; --muted:#666 }
+    body { margin:0; font-family:'Noto Sans KR', sans-serif; background:#f6f6f8; color:#222 }
+
+    .header { position:relative;width: 100%; height:848px; overflow:hidden }
+    .header-content{ position:relative; width:100%; height:100%;align-items: center; }
+    .main-title { position:absolute; top:10%; width:80%; max-width:300px; left:50%; transform:translateX(-50%); }
+    .main-photo { position:absolute; width: 393px; height: 848px; left:50%; transform:translateX(-50%);  }
+    .invitation {
+      max-width: 500px;       /* 모바일 화면 기준 */
+      margin: 0 auto;         /* 가운데 정렬 */
+      padding: 15px 10px;
+      text-align: center;     /* 텍스트 중앙 정렬 */
+      font-family: "Noto Sans KR", sans-serif;
+      line-height: 1.8;       /* 줄 간격 */
+      font-size: 18px;
+      color: #222;
+    }
+
+    .invitation .text {
+      white-space: pre-line; /* 줄바꿈 유지 */
+    }
+
+    .invitation .highlight {
+      color: #ff6fa5;        /* 포인트 컬러 (핑크) */
+      font-weight: 500;
+    }
+.profile-section {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #F2F2F2;
+}
+
+.profile-section .title {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.profiles {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.profile {
+  width: 220px;
+}
+
+.profile .parents {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.profile .name {
+  font-size: 18px;
+  margin-bottom: 12px;
+  font: Iropke Batang OTF;
+}
+.profile .name.groom {
+  color: #2a5bd7; /* 파랑 */
+}
+
+.profile .name.bride {
+  color: #d94f91; /* 핑크 */
+}
+
+.profile .photo {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.groom-photo {
+  border: 3px solid #2a5bd7;
+}
+
+.bride-photo {
+  border: 3px solid #d94f91;
+}
+
+.profile .birth {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+.tags span {
+  font-size: 13px;
+  color: #444;
+  background: #f9f9f9;
+  padding: 4px 8px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+.info-title-img{
+   
+}
+.name.bride .label {
+  color: #d94f91;  /* 핑크 */
+ 
+}
+.name.groom .person{
+  color: #000; /* 파랑 */
+}
+
+.name.bride .person {
+  color: #000;     /* 검정 */
+  
+}

@@ -7,271 +7,107 @@
   <link rel="stylesheet" href="main.css" />
    
 </head>
-<body class="bg-gradient-to-b from-rose-50 to-white text-gray-800">
-  <div id="app" class="min-h-screen">
+<body>
+  <header class="header">
+    <div class="header-content">
+      <img src="images/main.jpg" alt="Couple Photo" class="main-photo" />
+      <img src="images/main_title.png" alt="Couple Photo" class="main-title" />
+    </div>
+  </header>
 
-    <!-- Hero / Cover -->
-    <section class="relative">
-      <div class="ratio-3-4">
-        <img :src="coverImage" alt="cover" />
+  <main>
+    <section id="details" class="greetings">
+      <div class="invitation">
+        <p class="text">
+        안녕하세요.<br>
+        혼자 놀기 좋아하던
+        두 남녀가 만나 결혼합니다💍<br>
+        내향적이고 소소한 저희 커플과 어울리게
+        아주 가까운분들만 모시고
+        소박하게 예식을 진행하고자 합니다.
+        <span class="highlight">
+          얼굴 뵙고 직접 알리지 못한 점
+          너그러이 이해부탁드립니다😊
+        </span><br>
+        멀리서나마 마음으로
+        축복해주세요💕
+        <br>
+        <br>
+        </p>
       </div>
-      <div class="absolute inset-0 flex items-end pb-8">
-        <div class="w-full px-6">
-          <div class="glass rounded-2xl p-5 shadow-xl">
-            <p class="text-sm tracking-widest text-gray-700">INVITATION</p>
-            <h1 class="title-font text-3xl sm:text-4xl font-bold leading-tight">
-              {{ bride.name }} <span class="text-rose-500">&</span> {{ groom.name }}
-            </h1>
-            <p class="mt-2 text-gray-700">{{ dateText }} · {{ timeText }} · {{ weekdayKorean }}</p>
-            <p class="text-gray-700">{{ venue.name }}</p>
-            <div class="mt-3 flex gap-2">
-              <button @click="scrollTo('rsvp')" class="px-4 py-2 rounded-xl bg-rose-500 text-white text-sm shadow">참석하기</button>
-              <button @click="share()" class="px-4 py-2 rounded-xl bg-white text-gray-900 border text-sm shadow">공유하기</button>
+    </section>
+
+    <section class="card">
+      <div class="profile-section">
+        <h2 class="title">
+          <img src="images/info_title.png" alt="신랑신부소개 아이콘" class="info-title-img" />
+        </h2>
+        <div class="profiles">
+          <!-- 신랑 -->
+          <div class="profile">
+              <p class="parents">강은수·박상미의 장남</p>
+               <p class="name groom"><span class="label">신랑</span> | <span class="person">강복주</span></p>
+              <img src="images/info_m.png" alt="신랑 어린시절 사진" class="photo groom-photo">
+              <p class="birth">1990.1월 탄생</p>
+              <div class="tags">
+                <span>#INFJ</span>
+                <span>#게임(LOL)</span>
+                <span>#빵만들기</span>
+                <span>#꼼꼼함</span>
+                <span>#영화보기</span>
+                <span>#건담피규어</span>
+              </div>
+            </div>
+            <!-- 신부 -->
+            <div class="profile">
+              <p class="parents">고병욱·신명숙의 장녀</p>
+              <p class="name bride"><span class="label">신부</span> | <span class="person">고정연</span></p>
+              <img src="images/info_f.png" alt="신부 어린시절 사진" class="photo bride-photo">
+              <p class="birth">1989.6월 탄생</p>
+              <div class="tags">
+                <span>#INTP</span>
+                <span>#K-장녀</span>
+                <span>#강아지</span>
+                <span>#여행</span>
+                <span>#왕고집</span>
+                <span>#해리포터덕후</span>
+              </div>
             </div>
           </div>
         </div>
+    </section>
+
+    <section class="card">
+      <h2>사진첩</h2>
+      <div class="carousel">
+        <button class="arrow left" onclick="prevSlide()">‹</button>
+        <div class="slides" id="slides">
+          <div class="slide"><img src="images/gallery1.jpg" alt="1"></div>
+          <div class="slide"><img src="images/gallery2.jpg" alt="2"></div>
+          <div class="slide"><img src="images/gallery3.jpg" alt="3"></div>
+        </div>
+        <button class="arrow right" onclick="nextSlide()">›</button>
       </div>
     </section>
 
-    <!-- Countdown -->
-    <section class="px-6 py-8">
-      <div class="rounded-2xl bg-white shadow p-6 text-center">
-        <p class="text-sm text-gray-500">우리의 특별한 날까지</p>
-        <div class="mt-3 flex justify-center gap-4">
-          <div v-for="(v,k) in countdown" :key="k" class="w-20">
-            <div class="text-3xl font-bold">{{ v }}</div>
-            <div class="text-xs text-gray-500">{{ labels[k] }}</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Greeting -->
-    <section class="px-6 py-6">
-      <div class="rounded-2xl bg-white shadow p-6 leading-relaxed">
-        <p class="title-font text-2xl">초대합니다</p>
-        <p class="mt-3 text-gray-700">{{ message }}</p>
-        <div class="mt-5 grid grid-cols-2 gap-4 text-sm">
-          <div class="p-4 bg-rose-50 rounded-xl">
-            <p class="font-semibold">신부 {{ bride.name }}</p>
-            <p class="text-gray-600">{{ bride.phone }}</p>
-            <a :href="'tel:'+phoneDigits(bride.phone)" class="inline-block mt-2 text-rose-600 underline">전화하기</a>
-          </div>
-          <div class="p-4 bg-rose-50 rounded-xl">
-            <p class="font-semibold">신랑 {{ groom.name }}</p>
-            <p class="text-gray-600">{{ groom.phone }}</p>
-            <a :href="'tel:'+phoneDigits(groom.phone)" class="inline-block mt-2 text-rose-600 underline">전화하기</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery -->
-    <section class="px-6 py-6">
-      <div class="rounded-2xl bg-white shadow p-4">
-        <p class="title-font text-2xl px-2 py-2">갤러리</p>
-        <div class="grid grid-cols-3 gap-2">
-          <template v-for="(img,idx) in gallery" :key="idx">
-            <div class="relative w-full pt-[100%] overflow-hidden rounded-xl">
-              <img :src="img" class="absolute inset-0 w-full h-full object-cover" @click="openLightbox(idx)" alt="gallery"/>
-            </div>
-          </template>
-        </div>
-      </div>
-    </section>
-
-    <!-- Lightbox -->
-    <transition name="fade">
-      <div v-if="lightbox.open" class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center">
-        <button @click="lightbox.open=false" class="absolute top-5 right-5 text-white text-2xl">×</button>
-        <div class="max-w-[90vw] max-h-[80vh]">
-          <img :src="gallery[lightbox.index]" class="w-full h-full object-contain" alt="preview" />
-        </div>
-      </div>
-    </transition>
-
-    <!-- Location -->
-    <section class="px-6 py-6">
-      <div class="rounded-2xl bg-white shadow overflow-hidden">
-        <div class="ratio-3-4">
-          <img :src="mapPreview" alt="map" />
-        </div>
-        <div class="p-6">
-          <p class="title-font text-2xl">오시는 길</p>
-          <p class="mt-1 text-gray-700">{{ venue.name }}</p>
-          <p class="text-gray-600 text-sm">{{ venue.address }}</p>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <a :href="venue.mapLink" target="_blank" class="px-4 py-2 rounded-xl bg-rose-500 text-white text-sm shadow">지도 열기</a>
-            <a :href="navigateLink" target="_blank" class="px-4 py-2 rounded-xl bg-white border text-sm shadow">길찾기</a>
-          </div>
-          <details class="mt-4 open:shadow-inner">
-            <summary class="cursor-pointer font-semibold">대중교통 · 주차 안내</summary>
-            <ul class="list-disc pl-5 mt-2 text-sm text-gray-700 space-y-1">
-              <li v-for="(t,i) in transit" :key="i">{{ t }}</li>
-            </ul>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Account / Gift -->
-    <section class="px-6 py-6">
-      <div class="rounded-2xl bg-white shadow p-6">
-        <p class="title-font text-2xl">마음 전하실 곳</p>
-        <div class="mt-3 grid gap-3">
-          <div v-for="(acc,i) in accounts" :key="i" class="flex items-center justify-between bg-rose-50 rounded-xl p-4">
-            <div>
-              <p class="font-semibold">{{ acc.label }}</p>
-              <p class="text-sm text-gray-700">{{ acc.bank }} {{ acc.number }} ({{ acc.holder }})</p>
-            </div>
-            <button @click="copy(acc.bank+' '+acc.number+' '+acc.holder)" class="px-3 py-1.5 rounded-lg bg-rose-500 text-white text-sm">복사</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RSVP -->
-    <section id="rsvp" class="px-6 py-6 pb-[calc(24px+var(--safe))]">
-      <form @submit.prevent="submitRSVP" class="bg-white rounded-2xl shadow p-6 space-y-3">
-        <p class="title-font text-2xl">참석 의사 전달</p>
-        <label class="block">
-          <span class="text-sm">성함</span>
-          <input v-model.trim="rsvp.name" required class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="홍길동" />
-        </label>
-        <label class="block">
-          <span class="text-sm">연락처</span>
-          <input v-model.trim="rsvp.phone" required class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="010-0000-0000" />
-        </label>
-        <label class="block">
-          <span class="text-sm">인원</span>
-          <select v-model.number="rsvp.guests" class="mt-1 w-full rounded-xl border px-3 py-2">
-            <option :value="1">1명</option>
-            <option :value="2">2명</option>
-            <option :value="3">3명</option>
-            <option :value="4">4명</option>
-          </select>
-        </label>
-        <label class="block">
-          <span class="text-sm">메시지 (선택)</span>
-          <textarea v-model.trim="rsvp.message" rows="3" class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="축하 메시지를 남겨주세요"></textarea>
-        </label>
-        <button class="w-full rounded-xl bg-rose-600 text-white py-3 font-semibold shadow">전송</button>
-        <p v-if="rsvpSubmitted" class="text-center text-emerald-600">참석 의사가 저장되었습니다! (데모: 로컬 저장)</p>
-      </form>
-    </section>
-
-    <footer class="text-center text-xs text-gray-500 pb-[calc(12px+var(--safe))]">
-      © {{ new Date().getFullYear() }} {{ bride.name }} & {{ groom.name }}
+    
+    
+    <footer class="card footer">
+      <p>Designed with ❤️ · 모바일 청첩장 샘플</p>
     </footer>
-  </div>
-
-  <!-- Vue 3 -->
-  <script src="https://unpkg.com/vue@3.4.38/dist/vue.global.prod.js"></script>
+  </main>
+</body>
   <script>
-    const { createApp, onMounted, ref, computed } = Vue;
+    // 카운트다운
+  
 
-    createApp({
-      setup(){
-        const weddingDate = ref(new Date('2025-10-18T12:30:00+09:00'));
-        const bride = ref({ name: '강복주', phone: '010-2788-9015' });
-        const groom = ref({ name: '고정연', phone: '010-4475-0613' });
-        const venue = ref({
-          name: '연인의정원 분당',
-          address: '경기 성남시 분당구 서현로257번길 15 1층 연인의정원',
-          mapLink: 'https://map.naver.com',
-          lat: 37.385768, lng: 127.130815
-        });
-        const transit = ref([
-          '서현역 2번 출구에서 788m 도보 이동 (약 14분)',
-          '버스: 521 → 양현보도육교 정류장 하차',
-          '주차 2시간 무료 제공'
-        ]);
-        const message = ref('서로의 반쪽이 되어 한 길을 걸어가려 합니다. 소중한 걸음으로 축복해 주시면 더없는 기쁨이 되겠습니다.');
-        const accounts = ref([
-          { label: '신부측', bank: '카카오뱅크', number: '3333-01-1234567', holder: '강복주' },
-          { label: '신랑측', bank: '국민', number: '123456-04-567890', holder: '고정연' },
-        ]);
+    // 갤러리 슬라이드
+    let idx=0; const slides=document.getElementById('slides');
+    function showSlide(){ slides.style.transform=`translateX(-${idx*100}%)`; }
+    function prevSlide(){ idx=(idx-1+3)%3; showSlide(); }
+    function nextSlide(){ idx=(idx+1)%3; showSlide(); }
 
-        const rsvp = ref({ name:'', phone:'', guests:1, message:'' });
-        const rsvpSubmitted = ref(false);
-
-        // Media assets (데모용 placeholder)
-        const coverImage = ref('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1400&auto=format&fit=crop');
-        const gallery = ref([
-          'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop',
-          'https://images.unsplash.com/photo-1519744792095-2f2205e87b6f?q=80&w=1200&auto=format&fit=crop',
-          'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop',
-          'https://images.unsplash.com/photo-1529676468690-433f0155d41f?q=80&w=1200&auto=format&fit=crop',
-          'https://images.unsplash.com/photo-1537633552985-df8429e8048b?q=80&w=1200&auto=format&fit=crop',
-          'https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200&auto=format&fit=crop',
-        ]);
-        const mapPreview = ref('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1400&auto=format&fit=crop');
-
-        // Derived
-        const weekdayKorean = computed(() => ['일','월','화','수','목','금','토'][weddingDate.value.getDay()] + '요일');
-        const dateText = computed(() => weddingDate.value.toLocaleDateString('ko-KR', { year:'numeric', month:'long', day:'numeric' }));
-        const timeText = computed(() => weddingDate.value.toLocaleTimeString('ko-KR', { hour:'2-digit', minute:'2-digit' }));
-
-        // Countdown
-        const countdown = ref({ days:0, hours:0, mins:0, secs:0 });
-        const labels = { days:'일', hours:'시간', mins:'분', secs:'초' };
-        let timer;
-        const tick = () =>{
-          const now = new Date();
-          const diff = Math.max(0, weddingDate.value - now);
-          const d = Math.floor(diff / (1000*60*60*24));
-          const h = Math.floor((diff / (1000*60*60)) % 24);
-          const m = Math.floor((diff / (1000*60)) % 60);
-          const s = Math.floor((diff / 1000) % 60);
-          countdown.value = { days:d, hours:h, mins:m, secs:s };
-        };
-
-        onMounted(() => {
-          tick();
-          timer = setInterval(tick, 1000);
-        });
-
-        // UI helpers
-        const navigateLink = computed(() => `https://www.google.com/maps/dir/?api=1&destination=${venue.value.lat},${venue.value.lng}`);
-        const phoneDigits = (p) => (p||'').replace(/[^0-9]/g,'');
-
-        const copy = async (text) => {
-          try { await navigator.clipboard.writeText(text); alert('클립보드에 복사되었습니다.'); }
-          catch(e){
-            // fallback
-            const t = document.createElement('textarea');
-            t.value = text; document.body.appendChild(t); t.select(); document.execCommand('copy'); document.body.removeChild(t);
-            alert('클립보드에 복사되었습니다.');
-          }
-        };
-
-        const share = async () => {
-          const shareData = { title: '청첩장', text: `${bride.value.name} · ${groom.value.name}의 결혼식에 초대합니다`, url: location.href };
-          if(navigator.share){ try{ await navigator.share(shareData); } catch(e){} }
-          else { copy(shareData.url); }
-        };
-
-        const submitRSVP = () => {
-          const items = JSON.parse(localStorage.getItem('rsvps')||'[]');
-          items.push({ ...rsvp.value, at:new Date().toISOString() });
-          localStorage.setItem('rsvps', JSON.stringify(items));
-          rsvpSubmitted.value = true;
-          rsvp.value = { name:'', phone:'', guests:1, message:'' };
-          setTimeout(()=> rsvpSubmitted.value=false, 3000);
-        };
-
-        const lightbox = ref({ open:false, index:0 });
-        const openLightbox = (i)=>{ lightbox.value = { open:true, index:i }; };
-
-        const scrollTo = (id) => {
-          document.getElementById(id)?.scrollIntoView({ behavior:'smooth', block:'start' });
-        };
-
-        return { bride, groom, venue, transit, accounts, message, weddingDate, countdown, labels,
-                 dateText, timeText, weekdayKorean, coverImage, gallery, mapPreview, share, copy,
-                 submitRSVP, rsvp, rsvpSubmitted, navigateLink, phoneDigits, lightbox, openLightbox, scrollTo };
-      }
-    }).mount('#app');
+   
   </script>
 </body>
 </html>
