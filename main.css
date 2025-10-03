@@ -34,12 +34,16 @@
       color: #ff6fa5;        /* 포인트 컬러 (핑크) */
       font-weight: 500;
     }
+section{
+  text-align: center;
+  margin: 0px auto;
+}
 .profile-section {
   width: 393px;
   height: 524px;
   text-align: center;
   background-color: #F2F2F2;
-
+  margin: 0px auto;
 }
 .profile-section .info-title-img{
   margin-top: 29px;
@@ -135,7 +139,8 @@
   
 }
 .history-section{
-
+  max-width: 393px;
+  margin: 0px auto;
   
 }
 .event{
