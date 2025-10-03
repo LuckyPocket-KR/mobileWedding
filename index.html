@@ -10,7 +10,7 @@
 <body>
   <header class="header">
     <div class="header-content">
-      <img src="images/main.jpg" alt="Couple Photo" class="main-photo" />
+      <img src="images/main.png" alt="Couple Photo" class="main-photo" />
       <img src="images/main_title.png" alt="Couple Photo" class="main-title" />
     </div>
   </header>
@@ -46,16 +46,16 @@
           <!-- 신랑 -->
           <div class="profile">
               <p class="parents">강은수·박상미의 장남</p>
-               <p class="name groom"><span class="label">신랑</span> | <span class="person">강복주</span></p>
+              <p class="name groom"><span class="label">신랑</span> | <span class="person">강복주</span></p>
               <img src="images/info_m.png" alt="신랑 어린시절 사진" class="photo groom-photo">
               <p class="birth">1990.1월 탄생</p>
-              <div class="tags">
+              <div class="tags man">
                 <span>#INFJ</span>
-                <span>#게임(LOL)</span>
+                <span style="margin-left: 35px;">#게임(LOL)</span>
                 <span>#빵만들기</span>
-                <span>#꼼꼼함</span>
+                <span style="margin-left: 16px;padding-right: 9px;">#꼼꼼함</span>
                 <span>#영화보기</span>
-                <span>#건담피규어</span>
+                <span style="margin-left: 16px;">#건담피규어</span>
               </div>
             </div>
             <!-- 신부 -->
@@ -64,32 +64,79 @@
               <p class="name bride"><span class="label">신부</span> | <span class="person">고정연</span></p>
               <img src="images/info_f.png" alt="신부 어린시절 사진" class="photo bride-photo">
               <p class="birth">1989.6월 탄생</p>
-              <div class="tags">
-                <span>#INTP</span>
-                <span>#K-장녀</span>
-                <span>#강아지</span>
-                <span>#여행</span>
-                <span>#왕고집</span>
-                <span>#해리포터덕후</span>
+              <div class="tags girl">
+                <span style="margin-top: 10px; margin-left: 39px;">#INTP</span>
+                <span style="margin-top: 20px; margin-left: 93px;">#K-장녀</span>
+                <span style="margin-top: 42px; margin-left: 47px;">#강아지</span>
+                <span style="margin-top: 56px; margin-left: 115px;">#여행</span>
+                <span style="margin-top: 68px; margin-left: 26px;">#왕고집</span>
+                <span style="margin-top: 97px; margin-left: 79px;">#해리포터덕후</span>
               </div>
             </div>
           </div>
         </div>
     </section>
-
-    <section class="card">
-      <h2>사진첩</h2>
-      <div class="carousel">
-        <button class="arrow left" onclick="prevSlide()">‹</button>
-        <div class="slides" id="slides">
-          <div class="slide"><img src="images/gallery1.jpg" alt="1"></div>
-          <div class="slide"><img src="images/gallery2.jpg" alt="2"></div>
-          <div class="slide"><img src="images/gallery3.jpg" alt="3"></div>
+    <section class="history">
+      <div class="history-section">
+        <h2 style="font-size: 19px;margin-left: 137px;margin-top: 55px;">
+          우리의 History
+        </h2>
+         <div class="event">
+            <img  src="images/history_1.png" alt="첫 만남">
+            
+            <div class="event-content vertical-line">
+                <p style="margin-top: 31px;" class="history-title">첫만남</p>
+                <p class="history-title-date">2021.03.00</p>
+            
+                <p style="margin-top:9px;">코로나가 유행인 2021년,<br>마스크낀 얼굴을 마주하고<br>성수동에서 처음 만났어요.</p>
+            </div>
         </div>
-        <button class="arrow right" onclick="nextSlide()">›</button>
+
+        <div class="event img-right">
+            <div class="event-content">
+                <p style="margin-top: 50px;" class="history-title"></p>첫여행</p>
+                <p class="history-title-date">2021.00.00</p>
+                <p style="margin-top:9px;">유난히 더웠던 여름, 부산으로 첫여행을 떠났어요. 처음으로 싸우기도 하고 화해도 하며 서로에 대해 알아가는 시간이었어요.</p>
+            </div>
+            <img style="margin-top: 39px;" src="images/history_2.png" alt="첫 여행">
+        </div>
+
+        <div class="event">
+            <img src="images/history_3.png" alt="동거 시작">
+            <div class="event-content vertical-line">
+                <p style="margin-top: 41px;" class="history-title"></p>동거 시작</p>
+                <p class="history-title-date">2024.09.18</p>
+                <p style="margin-top:9px;">경기도 용인에서 저희만의<br>
+                  아담한 공간을 꾸리고<br>
+                   함께 살기 시작했어요.</p>
+            </div>
+        </div>
+
+        <div class="event img-right">
+            <div class="event-content" style="padding-left:35px ;">
+                <p style="margin-top: 22px;" class="history-title"></p>2세의 탄생</p>
+                <p class="history-title-date">2025.06.07</p>
+                <p style="margin-top:9px;">우리에게 새생명이<br>찾아왔어요!</p>
+            </div>
+            <img src="images/history_4.png" alt="동거 시작">
+        </div>
+
+        <div class="event">
+            <img src="images/history_5.png" alt="Wedding Day">
+            <div class="event-content vertical-line">
+                <p style="margin-top: 43px;" class="history-title"></p>Wedding Day</p>
+                <p class="history-title-date">2025.10.19</p>
+                <p style="margin-top:9px;">긴시간을 함께 보낸 우리,<br>드디어 결혼합니다.</p>
+            </div>
+        </div>
       </div>
     </section>
+    <section class="gallery">
+      <div class="gallery-section">
+        <p>갤러리</p>
 
+      </div>
+    </section>
     
     
     <footer class="card footer">

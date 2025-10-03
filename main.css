@@ -1,6 +1,15 @@
+/* fonts/IropkeBatangM.woff 파일을 프로젝트에 넣은 다음에 사용 */
+@font-face {
+  font-family: 'IropkeBatangM';
+  src: url('/fonts/IropkeBatangM.woff') format('woff');
+  font-weight: 400;
+
+}
 
  :root { --card-bg: #fff; --accent: #e07a5f; --muted:#666 }
-    body { margin:0; font-family:'Noto Sans KR', sans-serif; background:#f6f6f8; color:#222 }
+    body { margin:0; 
+        font-family: 'IropkeBatangM', 'Noto Sans KR', serif;
+      background:#f6f6f8; color:#222 }
 
     .header { position:relative;width: 100%; height:848px; overflow:hidden }
     .header-content{ position:relative; width:100%; height:100%;align-items: center; }
@@ -11,9 +20,9 @@
       margin: 0 auto;         /* 가운데 정렬 */
       padding: 15px 10px;
       text-align: center;     /* 텍스트 중앙 정렬 */
-      font-family: "Noto Sans KR", sans-serif;
+      
       line-height: 1.8;       /* 줄 간격 */
-      font-size: 18px;
+      font-size: 15px;
       color: #222;
     }
 
@@ -26,39 +35,37 @@
       font-weight: 500;
     }
 .profile-section {
+  width: 393px;
+  height: 524px;
   text-align: center;
-  padding: 40px 20px;
-  font-family: "Noto Sans KR", sans-serif;
   background-color: #F2F2F2;
-}
 
-.profile-section .title {
-  font-family: "Playfair Display", serif;
-  font-size: 32px;
-  margin-bottom: 40px;
 }
-
+.profile-section .info-title-img{
+  margin-top: 29px;
+}
 .profiles {
   display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
 }
+
 
 .profile {
   width: 220px;
 }
 
 .profile .parents {
-  font-size: 14px;
+  margin-top: 12px;
+  margin-bottom: 0px;
+  font-size: 10px;
   color: #666;
-  margin-bottom: 4px;
 }
 
 .profile .name {
   font-size: 18px;
-  margin-bottom: 12px;
-  font: Iropke Batang OTF;
+  margin-top: 0px;
+  margin-bottom: 0px;
+    font-weight: 400;
+  
 }
 .profile .name.groom {
   color: #2a5bd7; /* 파랑 */
@@ -69,41 +76,19 @@
 }
 
 .profile .photo {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
+  width: 154px;
+  height: 166px;
+  margin-top: 20px;
+  margin-bottom: 0px;
 
-.groom-photo {
-  border: 3px solid #2a5bd7;
-}
-
-.bride-photo {
-  border: 3px solid #d94f91;
 }
 
 .profile .birth {
-  font-size: 14px;
-  margin-bottom: 10px;
+  font-size: 11px;
+  margin-bottom: 0px;
 }
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px;
-}
-
-.tags span {
-  font-size: 13px;
-  color: #444;
-  background: #f9f9f9;
-  padding: 4px 8px;
-  border-radius: 12px;
-  border: 1px solid #eee;
-}
-.info-title-img{
-   
+.name .label{
+   font-size: 12px;
 }
 .name.bride .label {
   color: #d94f91;  /* 핑크 */
@@ -116,4 +101,108 @@
 .name.bride .person {
   color: #000;     /* 검정 */
   
+}
+.name .person{
+  font-size: 16px;
+}
+
+.tags {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.tags span {
+  font-size: 11px;
+  color: #444;
+  font-weight: 500;
+}
+.tags.man{
+  margin-left: 44px;
+
+}
+.tags.girl span{
+  position: absolute;
+
+}
+.tags.man span{
+  margin-top: 12px;
+}
+
+.history{
+  height: 900px;
+  
+}
+.history-section{
+
+  
+}
+.event{
+  display: flex;
+  margin-left: 19px;
+  margin-right:19px;
+  height: 162px;
+}
+.event.img-right{
+  height: 179px;
+}
+.event img{
+  margin-top: 17px;
+  width: 194px;
+  height: 128px;
+}
+.event-content{
+  margin-left: 19px;
+  padding-left: 17px;
+  text-align: left;
+}
+.event.img-right .event-content{
+  margin-left: 0px;
+  padding-left: 0x;
+  margin-right: 52px;
+   text-align: right;
+}
+.event.img-right .event-content{
+  margin-left: 0px;
+  padding-left: 0x;
+  margin-right: 52px;
+   text-align: right;
+}
+
+
+.event-content p{
+  margin: 0px;
+  font-family: Iropke Batang OTF;
+font-weight: 400;
+font-style: Medium;
+font-size: 8px;
+leading-trim: NONE;
+line-height: 11px;
+letter-spacing: 0%;
+
+}
+.vertical-line{
+  border-left: solid 0.3px #797979;
+}
+.event-content .history-title{
+font-family: Iropke Batang OTF;
+font-weight: 400;
+font-style: Medium;
+font-size: 15px;
+leading-trim: NONE;
+line-height: 18px;
+letter-spacing: 0%;
+
+
+}
+.event-content .history-title-date{
+  font-family: Iropke Batang OTF;
+font-weight: 400;
+font-style: Medium;
+font-size: 15px;
+leading-trim: NONE;
+line-height: 18px;
+letter-spacing: 0%;
+
 }
