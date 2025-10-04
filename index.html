@@ -40,7 +40,7 @@
     <section class="card">
       <div class="profile-section">
         <h2 class="title">
-          <img class="thumbnail"  src="images/info_title.png" alt="신랑신부소개 아이콘" class="info-title-img" />
+          <img class=""  src="images/info_title.png" alt="신랑신부소개 아이콘" class="info-title-img" />
         </h2>
         <div class="profiles">
           <!-- 신랑 -->
@@ -164,13 +164,17 @@
     <section class="" style="margin-top:126px ;">
         <img class="thumbnail" style="width: 393px;height:864px" src="images/end.png">
     </section>
-    <div id="myModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="imgPopup">
-  </div>
+    
     <footer class="card footer">
      
     </footer>
+      <!-- 모달 -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <span class="prev">&#10094;</span>
+      <img class="modal-content" id="imgPopup">
+      <span class="next">&#10095;</span>
+    </div>
   </main>
 </body>
   <script>
@@ -178,21 +182,47 @@
     var modal = document.getElementById("myModal");
     var modalImg = document.getElementById("imgPopup");
     var closeBtn = document.getElementsByClassName("close")[0];
+    var prevBtn = document.getElementsByClassName("prev")[0];
+    var nextBtn = document.getElementsByClassName("next")[0];
 
-    // 여러 이미지 선택
     var imgs = document.querySelectorAll(".thumbnail");
+    var currentIndex = 0;
 
-    imgs.forEach(function(img) {
+    // 이미지 클릭 시 원본 불러오기
+    imgs.forEach(function(img, index) {
       img.onclick = function(){
         modal.style.display = "block";
-        modalImg.src = this.src;
+        currentIndex = index;
+        showImage(currentIndex);
       }
     });
 
+    // 원본 이미지 보여주는 함수
+    function showImage(index) {
+      var thumbSrc = imgs[index].src;          // 썸네일 경로
+      var fileName = thumbSrc.split("/").pop(); // 파일명만 추출
+      //modalImg.src = "originals/" + fileName;  // 원본 폴더로 교체
+      modalImg.src = "images/" + fileName;  // 원본 폴더로 교체
+    }
+
+    // 이전 버튼
+    prevBtn.onclick = function() {
+      currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
+      showImage(currentIndex);
+    }
+
+    // 다음 버튼
+    nextBtn.onclick = function() {
+      currentIndex = (currentIndex + 1) % imgs.length;
+      showImage(currentIndex);
+    }
+
+    // 닫기 버튼
     closeBtn.onclick = function() {
       modal.style.display = "none";
     }
 
+    // 배경 클릭 시 닫기
     modal.onclick = function(e) {
       if (e.target === modal) {
         modal.style.display = "none";

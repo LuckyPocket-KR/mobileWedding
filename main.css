@@ -12,7 +12,8 @@
       background:#f6f6f8; color:#222 }
 
     .header { position:relative;width: 100%; height:848px; overflow:hidden }
-    .header-content{ position:relative; width:100%; height:100%;align-items: center; }
+    .header-content{ position:relative;     max-width: 393px;
+    margin: 0px auto; height:100%;align-items: center; }
     .main-title { position:absolute; top:10%; width:80%; max-width:300px; left:50%; transform:translateX(-50%); }
     .main-photo { position:absolute; width: 393px; height: 848px; left:50%; transform:translateX(-50%);  }
     .invitation {
@@ -248,7 +249,8 @@ letter-spacing: 0%;
  text-align: left;
 }
 
-  .thumbnail {
+ .thumbnail {
+     
       cursor: pointer;
       transition: 0.3s;
     }
@@ -264,7 +266,7 @@ letter-spacing: 0%;
     }
     .modal-content {
       display: block;
-      margin: 60px auto;
+      margin: auto;
       max-width: 80%;
       max-height: 80%;
       border-radius: 10px;
@@ -278,3 +280,20 @@ letter-spacing: 0%;
       cursor: pointer;
     }
     .close:hover { color: #bbb; }
+
+    /* 좌우 버튼 */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 30px;
+      transition: 0.3s;
+      user-select: none;
+    }
+    .prev { left: 20px; }
+    .next { right: 20px; }
+    .prev:hover, .next:hover { color: #bbb; }
