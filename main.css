@@ -1,7 +1,7 @@
 /* fonts/IropkeBatangM.woff 파일을 프로젝트에 넣은 다음에 사용 */
 @font-face {
   font-family: 'IropkeBatangM';
-  src: url('/fonts/IropkeBatangM.woff') format('woff');
+  src: url('fonts/IropkeBatangM.woff') format('woff');
   font-weight: 400;
 
 }
@@ -16,7 +16,7 @@
     .main-title { position:absolute; top:10%; width:80%; max-width:300px; left:50%; transform:translateX(-50%); }
     .main-photo { position:absolute; width: 393px; height: 848px; left:50%; transform:translateX(-50%);  }
     .invitation {
-      max-width: 500px;       /* 모바일 화면 기준 */
+      max-width: 393px;       /* 모바일 화면 기준 */
       margin: 0 auto;         /* 가운데 정렬 */
       padding: 15px 10px;
       text-align: center;     /* 텍스트 중앙 정렬 */
@@ -211,3 +211,70 @@ line-height: 18px;
 letter-spacing: 0%;
 
 }
+.gallery{
+  margin: 0px auto;
+}
+.gallery-section{
+   margin: 0px auto;
+   max-width: 393px;
+}
+.ds_flex{
+  display: flex;
+}
+
+.ds_block{
+  display: block;
+}
+.gallery_first_section img{
+  width: 195px;
+  height: 195px;
+}
+.gallery_second_section{
+  margin-top: 3px;
+}
+.gallery_second_section img{
+  width: 393px;
+  height: 195px;
+}
+.gallery_third_section {
+ margin-top: 3px;
+}
+.gallery_third_section img{
+  width: 195px;
+  height: 158px;
+}
+.gallery_fourth_section {
+ margin-top: 9px;
+ text-align: left;
+}
+
+  .thumbnail {
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .thumbnail:hover { opacity: 0.7; }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+    }
+    .modal-content {
+      display: block;
+      margin: 60px auto;
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+    .close {
+      position: absolute;
+      top: 20px; right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover { color: #bbb; }
