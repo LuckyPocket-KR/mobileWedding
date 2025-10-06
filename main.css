@@ -1,3 +1,28 @@
+/* 타임라인 중앙 점 */
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background: #176d1b;
+  border-radius: 50%;
+ 
+  z-index: 2;
+
+}
+/* 갤러리 상단 그라데이션 오버레이 */
+.gallery-gradient-overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to top, rgba(255,255,255,0.85) 60%, rgba(255,255,255,0) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
 /* fonts/IropkeBatangM.woff 파일을 프로젝트에 넣은 다음에 사용 */
 @font-face {
   font-family: 'IropkeBatangM';
@@ -5,40 +30,98 @@
   font-weight: 400;
 
 }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
 
  :root { --card-bg: #fff; --accent: #e07a5f; --muted:#666 }
-    body { margin:0; 
-        font-family: 'IropkeBatangM', 'Noto Sans KR', serif;
-      background:#f6f6f8; color:#222 }
+  body { margin:0; 
+      font-family: 'IropkeBatangM', 'Noto Sans KR', serif;
+    background:#FFFFFF; color:#222 }
 
-    .header { position:relative;width: 100%; height:848px; overflow:hidden }
-    .header-content{ position:relative;     max-width: 393px;
-    margin: 0px auto; height:100%;align-items: center; }
-    .main-title { position:absolute; top:10%; width:80%; max-width:300px; left:50%; transform:translateX(-50%); }
-    .main-photo { position:absolute; width: 393px; height: 848px; left:50%; transform:translateX(-50%);  }
-    .invitation {
-      max-width: 393px;       /* 모바일 화면 기준 */
-      margin: 0 auto;         /* 가운데 정렬 */
-      padding: 15px 10px;
-      text-align: center;     /* 텍스트 중앙 정렬 */
-      
-      line-height: 1.8;       /* 줄 간격 */
-      font-size: 15px;
-      color: #222;
-    }
+  .header { position:relative;width: 100%; height:848px; overflow:hidden }
+  .header-content{ position:relative;     max-width: 393px;
+  margin: 0px auto; height:100%;align-items: center; }
+  .main-title { position:absolute; top:10%; width:80%; max-width:300px; left:50%; transform:translateX(-50%); }
+  .main-photo { position:absolute; width: 393px; height: 848px; left:50%; transform:translateX(-50%);  }
+  .invitation {
+    max-width: 393px;       /* 모바일 화면 기준 */
+    margin: 0 auto;         /* 가운데 정렬 */
+    padding: 15px 10px;
+    text-align: center;     /* 텍스트 중앙 정렬 */
+    
+    line-height: 1.8;       /* 줄 간격 */
+    font-size: 15px;
+    color: #222;
+  }
 
-    .invitation .text {
-      white-space: pre-line; /* 줄바꿈 유지 */
-    }
+  .invitation .text {
+    white-space: pre-line; /* 줄바꿈 유지 */
+    font-weight: 400;
+    font-style: Medium;
+    font-size: 15px;
+    leading-trim: NONE;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: center;
 
-    .invitation .highlight {
-      color: #ff6fa5;        /* 포인트 컬러 (핑크) */
-      font-weight: 500;
-    }
+  }
+
+  .invitation .highlight {
+    color: #FF7BB2;        /* 포인트 컬러 (핑크) */
+   
+font-weight: 400;
+font-style: Medium;
+font-size: 15px;
+leading-trim: NONE;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: center;
+
+  }
 section{
   text-align: center;
   margin: 0px auto;
 }
+
+.event-info{
+ position:absolute; top:35%; width:80%; max-width:300px; left:50%; transform:translateX(-50%); 
+}
+.event-info p{
+
+font-weight: 400;
+font-style: Medium;
+font-size: 15px;
+leading-trim: NONE;
+line-height: 18px;
+letter-spacing: 0%;
+text-align: center;
+color: #1B6362;
+}
+
 .profile-section {
   width: 393px;
   height: 524px;
@@ -47,7 +130,7 @@ section{
   margin: 0px auto;
 }
 .profile-section .info-title-img{
-  margin-top: 29px;
+  margin-top: 32px;
 }
 .profiles {
   display: flex;
@@ -61,10 +144,20 @@ section{
 .profile .parents {
   margin-top: 12px;
   margin-bottom: 0px;
-  font-size: 10px;
-  color: #666;
-}
+ 
+font-weight: 400;
+font-style: Medium;
+font-size: 10px;
+leading-trim: NONE;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: center;
 
+  color: #414141;
+}
+.profile .thumbnail{
+  margin-top: 20px;
+}
 .profile .name {
   font-size: 18px;
   margin-top: 0px;
@@ -89,8 +182,17 @@ section{
 }
 
 .profile .birth {
-  font-size: 11px;
+  margin-top: 2px;
   margin-bottom: 0px;
+  
+font-weight: 400;
+font-style: Medium;
+font-size: 11px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+
 }
 .name .label{
    font-size: 12px;
@@ -132,92 +234,142 @@ section{
 
 }
 .tags.man span{
-  margin-top: 12px;
-}
+  margin-top: 10px;
+  
+font-weight: 500;
+font-style: Medium;
+font-size: 11px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
 
-.history{
-  height: 900px;
-  
 }
-.history-section{
+.timeline-section {
+  width: 100%;
   max-width: 393px;
-  margin: 0px auto;
-  
+  margin: 0 auto;
+  background: #fff;
+  padding-top: 75px;
 }
-.event{
+.timeline-title {
+  text-align: center;
+
+  margin-bottom: 32px;
+  margin-bottom: 48px;
+
+font-weight: 400;
+font-style: Medium;
+font-size: 19px;
+leading-trim: NONE;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: center;
+
+}
+.timeline {
+  position: relative;
+  padding: 0 0 32px 0;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #d1d5db;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.timeline-item {
   display: flex;
-  margin-left: 19px;
-  margin-right:19px;
-  height: 162px;
+  align-items: center;
+  margin-bottom: 48px;
+  position: relative;
 }
-.event.img-right{
-  height: 179px;
+.timeline-item.left {
+  flex-direction: row;
 }
-.event img{
-  margin-top: 17px;
-  width: 194px;
-  height: 128px;
+.timeline-item.right {
+  flex-direction: row-reverse;
 }
-.event-content{
-  margin-left: 19px;
-  padding-left: 17px;
+.timeline-img {
+  
+  width: 140px;
+  height: 140px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: #f8f8f8;
+  flex-shrink: 0;
+  margin: 10px 24px;
+}
+.timeline-img img {
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.timeline-content {
+  background: none;
+  padding-left: 38px;
   text-align: left;
 }
-.event.img-right .event-content{
-  margin-left: 0px;
-  padding-left: 0x;
-  margin-right: 52px;
-   text-align: right;
+.timeline-item.right .timeline-content {
+  background: none;
+  padding-right:38px;
+  text-align: right;
 }
-.event.img-right .event-content{
-  margin-left: 0px;
-  padding-left: 0x;
-  margin-right: 52px;
-   text-align: right;
-}
-
-
-.event-content p{
-  margin: 0px;
-  font-family: Iropke Batang OTF;
+.timeline-content h3 {
+ 
 font-weight: 400;
 font-style: Medium;
-font-size: 8px;
-leading-trim: NONE;
-line-height: 11px;
-letter-spacing: 0%;
-
-}
-.vertical-line{
-  border-left: solid 0.3px #797979;
-}
-.event-content .history-title{
-font-family: Iropke Batang OTF;
-font-weight: 400;
-font-style: Medium;
-font-size: 15px;
+font-size: 14px;
 leading-trim: NONE;
 line-height: 18px;
 letter-spacing: 0%;
 
 
 }
-.event-content .history-title-date{
-  font-family: Iropke Batang OTF;
+.timeline-date {
+margin-top: 2px;
 font-weight: 400;
 font-style: Medium;
-font-size: 15px;
+font-size: 12px;
 leading-trim: NONE;
 line-height: 18px;
 letter-spacing: 0%;
 
 }
+.timeline-content p{
+ margin-top: 7px;
+font-weight: 400;
+font-style: Medium;
+font-size: 10px;
+leading-trim: NONE;
+line-height: 14px;
+letter-spacing: 0%;
+
+} 
+
 .gallery{
   margin: 0px auto;
 }
 .gallery-section{
    margin: 0px auto;
    max-width: 393px;
+}
+.gallery-section p{
+  font-family: Iropke Batang OTF;
+font-weight: 400;
+font-style: Medium;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: center;
+
 }
 .ds_flex{
   display: flex;
@@ -254,46 +406,125 @@ letter-spacing: 0%;
       cursor: pointer;
       transition: 0.3s;
     }
-    .thumbnail:hover { opacity: 0.7; }
 
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.8);
-    }
-    .modal-content {
-      display: block;
-      margin: auto;
-      max-width: 80%;
-      max-height: 80%;
-      border-radius: 10px;
-    }
-    .close {
-      position: absolute;
-      top: 20px; right: 35px;
-      color: #fff;
-      font-size: 40px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .close:hover { color: #bbb; }
 
-    /* 좌우 버튼 */
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      padding: 16px;
-      margin-top: -50px;
-      color: white;
-      font-weight: bold;
-      font-size: 30px;
-      transition: 0.3s;
-      user-select: none;
+
+    
+    .map_section{
+      margin: 0px auto;
+      max-width: 390px;
     }
-    .prev { left: 20px; }
-    .next { right: 20px; }
-    .prev:hover, .next:hover { color: #bbb; }
+    .gallery-map_section p{
+  font-family: Iropke Batang OTF;
+font-weight: 400;
+font-style: Medium;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: center;
+
+}
+.map_title{
+  font-size: 19px; 
+}
+.place-card{
+  max-width:390px;
+  margin:0 auto;
+  margin-top: 20px;
+}
+.place-card h3{ margin:0 0 6px; font-size:16px; }
+.place-card button{
+  margin-top:8px;
+  padding:8px 12px;
+  border-radius:8px;
+  border:none;
+  font-size:14px;
+}
+.map_info_title{
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.map_button{
+    text-decoration: none;
+  background-color: #F2F2F2;
+  width: 120px;
+  height: 32px;
+  border-radius: 20px;
+  line-height: 32px;
+}
+
+  .info-section { max-width:393px; margin:0 auto 40px auto; font-family:'IropkeBatangM',serif; }
+    .info-title { 
+font-weight: 400;
+font-style: Medium;
+font-size: 19px;
+leading-trim: NONE;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: center;
+ }
+    .info-date { 
+font-weight: 400;
+font-style: Medium;
+font-size: 15px;
+leading-trim: NONE;
+line-height: 18px;
+letter-spacing: 0%;
+text-align: center;
+ }
+    .info-place {
+font-weight: 400;
+font-style: Medium;
+font-size: 15px;
+leading-trim: NONE;
+line-height: 18px;
+letter-spacing: 0%;
+text-align: center;
+}
+    .info-traffic { font-size:1.05em; margin:0 0 24px 0; }
+    .badge { display:inline-block; vertical-align:middle; }
+    .call-badge { display:inline-block; vertical-align:middle; }
+    .info-desc { text-align:center; font-size:1.05em; color:#222; margin:18px 0 18px 0; }
+
+    .account-slide-wrap { width:100%; max-width:292px; margin:36px auto; }
+    .account-toggle { width:100%; background:#fff; border:1px solid #aaa; border-radius:4px; 
+      padding:14px 0;  text-align:left; position:relative; cursor:pointer;  padding-left: 110px;
+    
+font-weight: 400;
+font-style: Medium;
+font-size: 15px;
+leading-trim: NONE;
+
+letter-spacing: 0%;
+
+
+    }
+    .account-toggle .arrow { float:right; margin-right:27px; margin-top: 3px;}
+  .account-slide { overflow:hidden; max-height:0px; transition:max-height 0.4s cubic-bezier(.4,0,.2,1); background:#fafafa; border:1px solid #eee; border-top:none; }
+  .account-list { padding:0; margin:0; }
+  .account-item { 
+    border-bottom:1px solid #ddd; padding:14px 18px 10px 18px; color:#222; background:#fff; 
+
+font-weight: 400;
+font-style: Medium;
+font-size: 15px;
+leading-trim: NONE;
+
+letter-spacing: 0%;
+text-align: left;
+
+  }
+  .account-item:last-child { border-bottom:none; }
+  .account-item span { display:block; margin-top:4px; font-size:1.05em; color:#444; }
+  .account-main { border:2px solid #2196f3; border-radius:4px; margin-bottom:8px; background:#f6fbff; }
+
+ .gallery-section { max-width:393px; margin:0 auto; }
+  .gallery-title { text-align:center; font-size:1.5em; margin:32px 0 18px 0; font-weight:bold; }
+  .gallery-grid { display:grid; grid-template-columns:1fr 1fr; }
+  .gallery-img { border-radius:5px;  }
+  .gallery-more { display:none; }
+  .gallery-more-btn-wrap {margin-left: 112px;  }
+  .gallery-more-btn { background:none; border:none; font-size:1.1em; color:#222; cursor:pointer; padding:8px 0; }
+  .gallery-more-btn:active { color:#2196f3; }

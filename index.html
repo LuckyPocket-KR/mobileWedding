@@ -5,19 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>모바일 청첩장</title>
   <link rel="stylesheet" href="main.css" />
-   
+  <link rel="stylesheet" href="modal.css" />  
 </head>
 <body>
   <header class="header">
     <div class="header-content">
       <img class="thumbnail"  src="images/main.png" alt="Couple Photo" class="main-photo" />
       <img src="images/main_title.png" alt="Couple Photo" class="main-title" />
+      <div class="event-info">
+        <p class="date">연인의 정원 분당점</p>
+        <p class="location" style="margin-top: 4px;">2025년 10월 19일 (일) 오후 3시</p>
+      </div>
+     
     </div>
   </header>
 
   <main>
     <section id="details" class="greetings">
-      <div class="invitation">
+      <div class="invitation" style="padding-top: 60px;">
         <p class="text">
         안녕하세요.<br>
         혼자 놀기 좋아하던
@@ -28,7 +33,7 @@
         <span class="highlight">
           얼굴 뵙고 직접 알리지 못한 점
           너그러이 이해부탁드립니다😊
-        </span><br>
+        </span>
         멀리서나마 마음으로
         축복해주세요💕
         <br>
@@ -40,129 +45,239 @@
     <section class="card">
       <div class="profile-section">
         <h2 class="title">
-          <img class=""  src="images/info_title.png" alt="신랑신부소개 아이콘" class="info-title-img" />
+          <img   class="info-title-img"  src="images/info_title.png" alt="신랑신부소개 아이콘"/>
         </h2>
         <div class="profiles">
           <!-- 신랑 -->
           <div class="profile">
-              <p class="parents">강은수·박상미의 장남</p>
+             
               <p class="name groom"><span class="label">신랑</span> | <span class="person">강복주</span></p>
               <img class="thumbnail"  src="images/info_m.png" alt="신랑 어린시절 사진" class="photo groom-photo">
+              <p class="parents">강은수·박상미의 장남</p>
               <p class="birth">1990.1월 탄생</p>
               <div class="tags man">
-                <span>#INFJ</span>
-                <span style="margin-left: 35px;">#게임(LOL)</span>
-                <span>#빵만들기</span>
-                <span style="margin-left: 16px;padding-right: 9px;">#꼼꼼함</span>
-                <span>#영화보기</span>
-                <span style="margin-left: 16px;">#건담피규어</span>
+                <div style="display: flex; gap: 16px; width: 100%;">
+                  <span>#INFJ</span>
+                  <span style="margin-left: 33px;">#게임(RTS)</span>
+                </div>
+                <div style="display: flex; gap: 16px; margin-top: 4px; width: 100%;">
+                  <span>#제과제빵</span>
+                  <span style="margin-left: 16px;padding-right: 9px;">#꼼꼼함</span>
+                </div>
+                <div style="display: flex; gap: 16px; margin-top: 4px; width: 100%;">
+                  <span>#영화보기</span>
+                  <span style="margin-left: 16px;">#건담피규어</span>
+                </div>
               </div>
             </div>
             <!-- 신부 -->
             <div class="profile">
-              <p class="parents">고병욱·신명숙의 장녀</p>
+              
               <p class="name bride"><span class="label">신부</span> | <span class="person">고정연</span></p>
               <img class="thumbnail"  src="images/info_f.png" alt="신부 어린시절 사진" class="photo bride-photo">
+              <p class="parents">고병욱·신명숙의 장녀</p>
               <p class="birth">1989.6월 탄생</p>
-              <div class="tags girl">
-                <span style="margin-top: 10px; margin-left: 39px;">#INTP</span>
-                <span style="margin-top: 20px; margin-left: 93px;">#K-장녀</span>
-                <span style="margin-top: 42px; margin-left: 47px;">#강아지</span>
-                <span style="margin-top: 56px; margin-left: 115px;">#여행</span>
-                <span style="margin-top: 68px; margin-left: 26px;">#왕고집</span>
-                <span style="margin-top: 97px; margin-left: 79px;">#해리포터덕후</span>
+              <div class="tags man">
+                <div style="display: flex; gap: 16px;width: 100%;">
+                  <span>#INTP</span>
+                  <span style="margin-left: 31px;">#K-장녀</span>
+                </div>
+                <div style="display: flex; gap: 16px; margin-top: 4px;width: 100%;">
+                  <span>#동물사랑</span>
+                  <span style="margin-left: 16px;padding-right: 9px;">#여행</span>
+                </div>
+                <div style="display: flex; gap: 16px; margin-top: 4px;width: 100%;">
+                  <span>#왕고집</span>
+                </div> 
+               
               </div>
             </div>
           </div>
         </div>
     </section>
-    <section class="history">
-      <div class="history-section">
-        <h2 style="font-size: 19px;margin-top: 55px;">
-          우리의 History
-        </h2>
-         <div class="event">
-            <img class="thumbnail"  src="images/history_1.png" alt="첫 만남">
-            
-            <div class="event-content vertical-line">
-                <p style="margin-top: 31px;" class="history-title">첫만남</p>
-                <p class="history-title-date">2021.03.00</p>
-            
-                <p style="margin-top:9px;">코로나가 유행인 2021년,<br>마스크낀 얼굴을 마주하고<br>성수동에서 처음 만났어요.</p>
-            </div>
-        </div>
-
-        <div class="event img-right">
-            <div class="event-content">
-                <p style="margin-top: 50px;" class="history-title"></p>첫여행</p>
-                <p class="history-title-date">2021.00.00</p>
-                <p style="margin-top:9px;">유난히 더웠던 여름, 부산으로 첫여행을 떠났어요. 처음으로 싸우기도 하고 화해도 하며 서로에 대해 알아가는 시간이었어요.</p>
-            </div>
-            <img class="thumbnail"  style="margin-top: 39px;" src="images/history_2.png" alt="첫 여행">
-        </div>
-
-        <div class="event">
-            <img class="thumbnail"  src="images/history_3.png" alt="동거 시작">
-            <div class="event-content vertical-line">
-                <p style="margin-top: 41px;" class="history-title"></p>동거 시작</p>
-                <p class="history-title-date">2024.09.18</p>
-                <p style="margin-top:9px;">경기도 용인에서 저희만의<br>
-                  아담한 공간을 꾸리고<br>
-                   함께 살기 시작했어요.</p>
-            </div>
-        </div>
-
-        <div class="event img-right">
-            <div class="event-content" style="padding-left:35px ;">
-                <p style="margin-top: 22px;" class="history-title"></p>2세의 탄생</p>
-                <p class="history-title-date">2025.06.07</p>
-                <p style="margin-top:9px;">우리에게 새생명이<br>찾아왔어요!</p>
-            </div>
-            <img class="thumbnail"  src="images/history_4.png" alt="동거 시작">
-        </div>
-
-        <div class="event">
-            <img class="thumbnail"  src="images/history_5.png" alt="Wedding Day">
-            <div class="event-content vertical-line">
-                <p style="margin-top: 43px;" class="history-title"></p>Wedding Day</p>
-                <p class="history-title-date">2025.10.19</p>
-                <p style="margin-top:9px;">긴시간을 함께 보낸 우리,<br>드디어 결혼합니다.</p>
-            </div>
-        </div>
+    <section class="timeline-section">
+  <h2 class="timeline-title">우리의 시간</h2>
+  <div class="timeline">
+    <!-- 첫만남 -->
+    <div class="timeline-item left">
+      <div class="timeline-img">
+        <img src="images/history_1.png" alt="첫만남">
       </div>
-    </section>
-    <section class="gallery">
-      <div class="gallery-section">
-        <p>갤러리</p>
-        <div class="ds_flex gallery_first_section">
-           <img class="thumbnail"  src="images/gallery_1.png"/>
-           <img class="thumbnail"  style="margin-left: 3px;" src="images/gallery_1.png"/>
-        </div>
-        <div class="ds_flex gallery_second_section">
-           <img class="thumbnail"  src="images/gallery_2.png"/>
-        </div>
-        <div class="ds_flex gallery_third_section">
-           <img class="thumbnail"  src="images/gallery_3.png"/>
-           <img class="thumbnail"  style="margin-left: 3px;" src="images/gallery_3.png"/>
-        </div>
-        <div class="ds_flex gallery_fourth_section">
-           <div class="ds_block">
-              <img class="thumbnail"  style="width: 157px;height: 162px;" src="images/gallery_5.png"/>
-              <img class="thumbnail" style="width: 157px;height: 162px;margin-top: 5px;" src="images/gallery_6.png"/>
-           </div>
-            <img class="thumbnail" width: 231px;height: 333px;margin-left: 5px;" src="images/gallery_4.png"/> 
-        </div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>첫만남</h3>
+        <p class="timeline-date">2021.03.19</p>
+        <p>코로나가 유행인 2021년,<br>마스크낀 얼굴을 마주하고<br>성수동에서 처음 만났어요.</p>
       </div>
-    </section>
-    <section class="greetings" style="margin-top:126px ;">
-      <p>
-        서로 배려하고<br>
-        부족한 부분은 채워주며<br>
-        잘 살겠습니다💕
-      </p>
-    </section>
-    <section class="" style="margin-top:126px ;">
-        <img class="thumbnail" style="width: 393px;height:864px" src="images/end.png">
+    </div>
+    <!-- 첫여행 -->
+    <div class="timeline-item right">
+      <div class="timeline-img">
+        <img src="images/history_2.png" alt="첫여행">
+      </div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>첫여행</h3>
+        <p class="timeline-date">2021.08.19</p>
+        <p>부산으로 첫여행을 떠났어요.<br>처음으로 싸우기도 하고<br>화해도 하며 서로에 대해<br>알아가는 시간이었어요.</p>
+      </div>
+    </div>
+    <!-- 동거시작 -->
+    <div class="timeline-item left">
+      <div class="timeline-img">
+        <img src="images/history_3.png" alt="동거시작">
+      </div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>동거시작</h3>
+        <p class="timeline-date">2024.09.18</p>
+        <p>저희만의 아담한 공간을 꾸리고<br>함께 살기 시작했어요.</p>
+      </div>
+    </div>
+    <!-- 2세 -->
+    <div class="timeline-item right">
+      <div class="timeline-img">
+        <img src="images/history_4.png" alt="우리의 2세">
+      </div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>우리의 2세</h3>
+        <p class="timeline-date">2025.06.07</p>
+        <p>우리에게 새생명이<br>찾아왔어요!</p>
+      </div>
+    </div>
+    <!-- 결혼식 -->
+    <div class="timeline-item left">
+      <div class="timeline-img">
+        <img src="images/history_5.png" alt="Wedding Day">
+      </div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Wedding Day</h3>
+        <p class="timeline-date">2025.10.19</p>
+        <p>긴 시간을 함께 보낸 우리,<br>드디어 결혼합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 예식 안내 및 오시는 길, 계좌번호 섹션 -->
+<section class="info-section" style="max-width:393px;margin:75px auto; padding: 0px 12px;">
+  <h2 class="info-title">예식 안내</h2>
+  <div class="info-date">2025년 10월 19일 (일) 오후 3시</div>
+
+  <h2 class="info-title" style="margin-top:40px;">오시는 길</h2> 
+  <div class="info-place">
+    연인의 정원 분당점 <span class="call-badge" style="width: 48px;height:18px;background:#343434;color:#fff;border-radius:12px;font-size:12px;vertical-align:middle;margin-left:4px;">☎ 전화</span><br>
+    <span style="font-size:0.98em;">경기 성남시 분당구 서현로257번길 15 1층 연인의정원</span>
+  </div>
+  <div class="info-map">
+    <img src="images/map_info_main.png" alt="오시는 길 지도" style="width:100%;margin-top:16px;border-radius:12px;"/>
+  </div>
+  <div class="info-traffic" style="margin-top:40px;padding-left: 56px;">
+    <div style="margin-bottom:18px; text-align:left;">
+      <div><img src="images/subway.png" alt="지하철" style="width:60px;height: 18px;display:inline-block;vertical-align:middle;"/></div>
+      <div style="margin-top:4px;">
+        <span class="badge" style="background:#EAA805;color:#FFFFFF;border-radius:10px;padding:2px 8px;font-size:12px;margin-right:6px;">
+          수인분당</span>
+        <span style="
+font-weight: 400;
+font-style: Medium;
+font-size: 15px;
+leading-trim: NONE;
+line-height: 18px;
+letter-spacing: 0%;
+text-align: center;
+">서현역 2번 출구 하차 도보 14분</span>
+      </div>
+    </div>
+    <div style="margin-top: 35px;margin-bottom:8px; text-align:left;">
+      <div><img src="images/car.png" alt="자차" style="width:60px;height: 18px;display:inline-block;vertical-align:middle;"/></div>
+      <div style="margin-top:4px;
+font-weight: 400;
+font-style: Medium;
+font-size: 15px;
+leading-trim: NONE;
+line-height: 18px;
+letter-spacing: 0%;
+
+">
+        연인의 정원 분당점 검색
+      </div>
+    </div>
+  </div>
+
+  <h2 class="info-title" style="margin-top:48px;">마음 전하실 곳 <span style="
+font-weight: 400;
+font-style: Medium;
+font-size: 19px;
+leading-trim: NONE;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: center;"
+>(계좌번호)</span></h2>
+  <div class="info-desc" style="margin-top: 20px; margin-bottom:18px;">
+    멀리서도 축하의 마음을<br> 전하고 싶으신 분들을 위해<br>계좌번호를 안내드립니다.
+  </div>
+  <div class="account-slide-wrap">
+  <button class="account-toggle" onclick="toggleAccount('groom')">신랑측 <span class="arrow" id="arrow-groom"><img src="images/down.png" alt="arrow"></span></button>
+    <div class="account-slide" id="account-groom">
+      <div class="account-list">
+        <div class="account-item">신랑<br><span>307002-04-159300 국민은행 강복주</span></div>
+        <div class="account-item">신랑 아버지<br><span>307002-04-159300 국민은행 강은수</span></div>
+        <div class="account-item">신랑 어머니<br><span>307002-04-159300 국민은행 박상미</span></div>
+      </div>
+    </div>
+  <button style="margin-top: 10px;" class="account-toggle" onclick="toggleAccount('bride')">신부측 <span class="arrow" id="arrow-bride"><img src="images/down.png" alt="arrow"></span></button>
+    <div class="account-slide" id="account-bride">
+      <div class="account-list"> 
+        <div class="account-item ">신부<br><span>110-479-711902 신한은행 고정연</span></div>
+        <div class="account-item">신부 아버지<br><span>307002-04-159300 국민은행 고병욱</span></div>
+        <div class="account-item">신부 어머니<br><span>307002-04-159300 국민은행 신명숙</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="gallery">
+
+  <div class="gallery-section">
+    <p class="gallery-title">갤러리</p>
+    <div style="position:relative; width:100%;">
+      <div class="gallery-gradient-overlay"></div>
+      <div class="gallery-grid">
+        <img class="gallery-img thumbnail" style="width: 173px;height: 246px;margin-left: 21px;" src="images/gallery_1.png" alt="갤러리1" />
+        <img class="gallery-img thumbnail" style="width: 173px;height: 261px;"src="images/gallery_2.png" alt="갤러리2" />
+        <img class="gallery-img thumbnail" style="width: 173px;height: 261px;margin-left: 21px;margin-top: -10px;"src="images/gallery_3.png" alt="갤러리3" />
+        <img class="gallery-img thumbnail" style="width: 173px;height: 261px;margin-top: 5px;"src="images/gallery_4.png" alt="갤러리4" />
+        <img class="gallery-img gallery-more thumbnail" style="width: 173px;height: 246px;margin-left: 21px;"src="images/gallery_5.png" alt="갤러리5" style="display:none;" />
+        <img class="gallery-img gallery-more thumbnail" style="width: 173px;height: 195px;"src="images/gallery_6.png" alt="갤러리6" style="display:none;" />
+      </div>
+    </div>
+   
+    <div class="gallery-more-btn-wrap">
+      <button id="gallery-more-btn" class="gallery-more-btn" style="display: flex;">
+        <div style="display: flex; flex-direction: column; justify-content: center; margin-right:8px;">
+          <img class="gallery-more-arrow-left" src="images/down.png" alt="arrow" style="width:18px;height:9px; margin-bottom:2px;"/>
+          <img class="gallery-more-arrow-left" src="images/down.png" alt="arrow" style="width:18px;height:9px;    margin-top: -5px;"/>
+        </div>
+        <span style="font-size:15px;vertical-align:middle;margin-left: 48px;">더보기</span>
+         <div style="display: flex; flex-direction: column; justify-content: center; margin-right:8px;margin-left: 48px;">
+          <img class="gallery-more-arrow-left" src="images/down.png" alt="arrow" style="width:18px;height:9px; margin-bottom:2px;"/>
+          <img class="gallery-more-arrow-left" src="images/down.png" alt="arrow" style="width:18px;height:9px;    margin-top: -5px;"/>
+        </div>
+       </button>
+    </div>
+  </div>
+</section>
+<section class="greetings" style="margin-top:75px ;">
+  <p>
+    서로 배려하고<br>
+    부족한 부분은 채워주며<br>
+    잘 살겠습니다💕
+  </p>
+</section>
+ 
+    <section class="" style="margin-top:77px ;">
+        <img class="thumbnail" style="width: 393px;height:559px" src="images/end.png">
     </section>
     
     <footer class="card footer">
@@ -175,10 +290,85 @@
       <img class="modal-content" id="imgPopup">
       <span class="next">&#10095;</span>
     </div>
+    <!-- 공지사항 모달 -->
+    <div id="noticeModal" class="notice-modal">
+      <div class="notice-modal-content">
+        <p>🌸 가까운 가족들과 함께 소박하게 예식을 올립니다.<br>
+        직접 초대드리지 못하는 점 양해 부탁드리며,<br>
+        따뜻한 축복의 마음으로 함께해주시면<br> 감사하겠습니다 🤍</p>
+        <button class="notice-close">닫기</button>
+      </div>
+    </div>
   </main>
 </body>
   <script>
+  // 갤러리 더보기 버튼
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('gallery-more-btn');
+    var arrowLefts = document.getElementsByClassName('gallery-more-arrow-left');
+    var arrowRight = document.getElementById('gallery-more-arrow-right');
+    var gradient = document.querySelector('.gallery-gradient-overlay');
+    var expanded = false;
+    if(btn) {
+      btn.onclick = function() {
+        var moreImgs = document.querySelectorAll('.gallery-more');
+        if(!expanded) {
+          moreImgs.forEach(function(img) { img.style.display = 'block'; });
+          // 아이콘 up으로 변경 (왼쪽 모두)
+          for(var i=0; i<arrowLefts.length; i++) { arrowLefts[i].src = 'images/up.png'; }
+          if(arrowRight) arrowRight.src = 'images/up.png';
+          btn.style.opacity = 0.7;
+          if(gradient) gradient.style.display = 'none';
+        } else {
+          moreImgs.forEach(function(img) { img.style.display = 'none'; });
+          // 아이콘 down으로 변경 (왼쪽 모두)
+          for(var i=0; i<arrowLefts.length; i++) { arrowLefts[i].src = 'images/down.png'; }
+          if(arrowRight) arrowRight.src = 'images/down.png';
+          btn.style.opacity = 1;
+          if(gradient) gradient.style.display = '';
+        }
+        expanded = !expanded;
+      }
+    }
+  });
+ 
+  // 계좌 슬라이드 토글
+  function toggleAccount(type) {
+    var slide = document.getElementById('account-' + type);
+    var arrow = document.getElementById('arrow-' + type).querySelector('img');
+    var isOpen = slide.style.maxHeight && slide.style.maxHeight !== '0px';
+    // 닫기
+    if(isOpen) {
+      slide.style.maxHeight = '0px';
+      arrow.src = 'images/down.png';
+    } else {
+      // 모두 닫기
+      document.getElementById('account-groom').style.maxHeight = '0px';
+      document.getElementById('arrow-groom').querySelector('img').src = 'images/down.png';
+      document.getElementById('account-bride').style.maxHeight = '0px';
+      document.getElementById('arrow-bride').querySelector('img').src = 'images/down.png';
+      // 열기 (충분히 큰 값으로 설정)
+      slide.style.maxHeight = '500px';
+      arrow.src = 'images/up.png';
+    }
+  }
+     window.onload = function() {
+    const modal = document.getElementById("noticeModal");
+    const closeBtn = document.querySelector(".notice-close");
 
+    modal.style.display = "block";
+
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // 모달 바깥 클릭 시 닫기
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  }
     var modal = document.getElementById("myModal");
     var modalImg = document.getElementById("imgPopup");
     var closeBtn = document.getElementsByClassName("close")[0];
@@ -191,7 +381,7 @@
     // 이미지 클릭 시 원본 불러오기
     imgs.forEach(function(img, index) {
       img.onclick = function(){
-        modal.style.display = "block";
+        modal.style.display = "flex";
         currentIndex = index;
         showImage(currentIndex);
       }
@@ -230,5 +420,7 @@
     }
    
   </script>
+
+
 </body>
 </html>
